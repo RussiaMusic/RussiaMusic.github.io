@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать музыку бесплатно в MP3 — Слушать онлайн новинки музыки 2026 | Russia Music</title>
+    <meta name="description" content="Бесплатный музыкальный портал Russia Music. Слушать музыку онлайн бесплатно в хорошем качестве и скачать MP3 песни 2026 года без регистрации. Русские хиты, новинки в машину и популярные альбомы.">
+    <meta name="keywords" content="скачать музыку бесплатно, слушать музыку онлайн, музыка 2026, новинки музыки, музыка в хорошем качестве, яндекс музыка, скачать песни mp3, музыка в машину, русская музыка">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Russia Music — Скачать и слушать музыку бесплатно онлайн (2026)">
+    <meta property="og:description" content="Огромный каталог музыки: скачать MP3, новинки недели, хиты в машину и официальные треки.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-body: #0b0e14;
+            --bg-card: #151922;
+            --bg-card-hover: #1e2330;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --accent: #ec4899;
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --border: #262c3a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 90px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #111827 0%, var(--bg-body) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0 30px 0;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-area {
+            text-align: center;
+        }
+
+        .logo-area h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-area p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        /* Search Bar */
+        .search-box {
+            width: 100%;
+            max-width: 650px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            background-color: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 30px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-sub);
+            font-size: 1.1rem;
+        }
+
+        /* Tag Pills for SEO Query Boost */
+        .seo-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+        }
+
+        .tag-pill {
+            background: #1c2230;
+            color: var(--text-sub);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tag-pill:hover {
+            color: white;
+            border-color: var(--primary);
+            background: var(--primary);
+        }
+
+        /* Main Container */
+        .main-content {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* External Platforms Section */
+        .external-links-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 35px;
+        }
+
+        .bar-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+        }
+
+        .platform-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #1e2433;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .platform-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .platform-btn.my-world {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: none;
+        }
+
+        /* Categories / Albums Tabs */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .album-tabs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-sub);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Track List Table */
+        .tracks-container {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .track-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        .track-row:last-child { border-bottom: none; }
+
+        .track-row:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .track-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .play-trigger {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .play-trigger:hover {
+            background: var(--primary-hover);
+            transform: scale(1.08);
+        }
+
+        .track-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .track-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .track-meta {
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            margin-top: 2px;
+        }
+
+        .track-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .download-link {
+            background: #252b3b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .download-link:hover {
+            background: #323a4e;
+            border-color: var(--primary);
+        }
+
+        /* SEO Footnote Text Block */
+        .seo-footer-block {
+            margin-top: 50px;
+            padding: 25px;
+            background: #11141c;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            color: #6b7280;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .seo-footer-block h3 {
+            color: var(--text-sub);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Bottom Fixed Audio Player */
+        .fixed-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0f131c;
+            border-top: 1px solid var(--border);
+            padding: 12px 20px;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
+            z-index: 1000;
+        }
+
+        .player-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .player-track-info {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 300px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 550px;
+            height: 36px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <h1>RUSSIA MUSIC</h1>
+                <p>Главный музыкальный портал • Скачать музыку MP3 бесплатно и слушать онлайн 2026</p>
+            </div>
+
+            <!-- Живой поиск -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Введите название песни или исполнителя (например, Thalina, Vibe, Ночной рейд)..." oninput="filterTracks()">
+            </div>
+
+            <!-- SEO Теги быстрых запросов -->
+            <div class="seo-tags">
+                <span class="tag-pill" onclick="setSearch('Новинки 2026')">🔥 Новинки 2026</span>
+                <span class="tag-pill" onclick="setSearch('В машину')">🚗 Музыка в машину</span>
+                <span class="tag-pill" onclick="setSearch('Русские хиты')">🇷🇺 Русские хиты</span>
+                <span class="tag-pill" onclick="setSearch('Thalina')">✨ Thalina</span>
+                <span class="tag-pill" onclick="setSearch('Замок')">🏰 Замок</span>
+                <span class="tag-pill" onclick="setSearch('TOP 100')">🏆 ТОП 100</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+
+        <!-- Внешние площадки и партнёрские ссылки -->
+        <div class="external-links-bar">
+            <div class="bar-title">Официальные стриминговые платформы</div>
+            <div class="platforms-grid">
+                <a href="https://dalam.world/" target="_blank" class="platform-btn my-world">
+                    <i class="fa-solid fa-globe"></i> Мой мир
+                </a>
+                <a href="https://link.dalam.world/elf_yandex" target="_blank" class="platform-btn" style="color: #ffcc00;">
+                    <i class="fa-solid fa-music"></i> Яндекс Музыка
+                </a>
+                <a href="https://link.dalam.world/elf_spotify" target="_blank" class="platform-btn" style="color: #1ed760;">
+                    <i class="fa-brands fa-spotify"></i> Spotify
+                </a>
+                <a href="https://link.dalam.world/elf_apple" target="_blank" class="platform-btn" style="color: #fa57c1;">
+                    <i class="fa-brands fa-apple"></i> Apple Music
+                </a>
+                <a href="https://link.dalam.world/elf_vk" target="_blank" class="platform-btn" style="color: #0077ff;">
+                    <i class="fa-brands fa-vk"></i> VK Музыка
+                </a>
+            </div>
+        </div>
+
+        <!-- Раздел каталога треков -->
+        <div class="section-header">
+            <h2>Популярные альбомы & Чарт</h2>
+        </div>
+
+        <!-- Вкладки альбомов из API -->
+        <div class="album-tabs" id="album-tabs">
+            <!-- Динамически подгружаются кнопки альбомов -->
+        </div>
+
+        <!-- Список треков -->
+        <div class="tracks-container" id="tracks-list">
+            <p style="text-align: center; padding: 30px; color: var(--text-sub);">Загрузка музыки из общего каталога...</p>
+        </div>
+
+        <!-- Плотный SEO-блок для индексации поисковыми роботами -->
+        <div class="seo-footer-block">
+            <h3>Russia Music — Скачать музыку бесплатно и слушать онлайн MP3</h3>
+            <p>
+                На портале <strong>Russia Music</strong> вы можете бесплатно слушать музыку онлайн и скачивать лучшие новинки песен 2026 года в высоком качестве MP3. В нашем каталоге собрана самая популярная музыка для машины, тренировок и отдыха: от свежих синглов исполнителя <em>Thalina</em> (альбомы «Та самая эльфийка», «Beta Version Sound») до главных хитов года. Выбирайте любимый альбом, слушайте треки без ограничений через удобный онлайн-плеер или сохраняйте MP3 на телефон и ПК в один клик. Прямой доступ к релизам на платформах Яндекс Музыка, VK Музыка, Spotify и Apple Music.
+            </p>
+        </div>
+    </div>
+
+    <!-- Фиксированный аудиоплеер -->
+    <div class="fixed-player">
+        <div class="player-inner">
+            <div class="player-track-info" id="current-track-name">Выберите песню для воспроизведения</div>
+            <audio id="main-audio" controls></audio>
+        </div>
+    </div>
+
+    <script>
+        const ALBUMS_API = "https://api.dalam.world/android/music-albums.json";
+        let allTracksData = []; // Локальный массив всех загруженных треков для поиска
+        let currentPlayBtn = null;
+
+        const audioPlayer = document.getElementById('main-audio');
+        const trackTitleDisplay = document.getElementById('current-track-name');
+
+        async function initCatalog() {
+            try {
+                const response = await fetch(ALBUMS_API);
+                const albums = await response.json();
+                
+                const tabsContainer = document.getElementById('album-tabs');
+                tabsContainer.innerHTML = '';
+
+                // Кнопка Все треки
+                const allBtn = document.createElement('button');
+                allBtn.className = 'tab-btn active';
+                allBtn.innerText = '🔥 Все новинки';
+                allBtn.onclick = () => {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    allBtn.classList.add('active');
+                    renderTracks(allTracksData);
+                };
+                tabsContainer.appendChild(allBtn);
+
+                allTracksData = [];
+                let isFirst = true;
+
+                for (const [albumName, albumUrl] of Object.entries(albums)) {
+                    // Создаем вкладку для каждого альбома
+                    const btn = document.createElement('button');
+                    btn.className = 'tab-btn';
+                    btn.innerText = albumName;
+                    
+                    const tracks = await fetchAlbumTracks(albumUrl, albumName);
+                    allTracksData.push(...tracks);
+
+                    btn.onclick = () => {
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const filtered = allTracksData.filter(t => t.album === albumName);
+                        renderTracks(filtered);
+                    };
+
+                    tabsContainer.appendChild(btn);
+                }
+
+                // Отображаем все загруженные треки
+                renderTracks(allTracksData);
+
+            } catch (err) {
+                console.error("Ошибка загрузки API:", err);
+                document.getElementById('tracks-list').innerHTML = '<p style="text-align: center; padding: 20px; color: #ef4444;">Ошибка подключения к серверу музыки.</p>';
+            }
+        }
+
+        async function fetchAlbumTracks(url, albumName) {
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const list = [];
+                for (const [title, mp3Url] of Object.entries(data)) {
+                    list.push({
+                        title: title,
+                        artist: "Thalina • 2026",
+                        album: albumName,
+                        url: mp3Url
+                    });
+                }
+                return list;
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function renderTracks(tracksList) {
+            const container = document.getElementById('tracks-list');
+            if (!tracksList || tracksList.length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 30px; color: var(--text-sub);">По вашему запросу ничего не найдено.</p>';
+                return;
+            }
+
+            container.innerHTML = '';
+            tracksList.forEach((track) => {
+                const row = document.createElement('div');
+                row.className = 'track-row';
+                row.innerHTML = `
+                    <div class="track-left">
+                        <button class="play-trigger" onclick="playSong('${track.title}', '${track.artist}', '${track.url}', this)">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <div class="track-details">
+                            <span class="track-title">${track.title}</span>
+                            <span class="track-meta">${track.artist} (${track.album})</span>
+                        </div>
+                    </div>
+                    <div class="track-actions">
+                        <a href="${track.url}" download="${track.title}.mp3" target="_blank" class="download-link">
+                            <i class="fa-solid fa-download"></i> Скачать MP3
+                        </a>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function playSong(title, artist, url, btn) {
+            if (currentPlayBtn && currentPlayBtn !== btn) {
+                currentPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+
+            if (audioPlayer.src === url && !audioPlayer.paused) {
+                audioPlayer.pause();
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                trackTitleDisplay.innerText = `Пауза: ${title}`;
+                return;
+            }
+
+            audioPlayer.src = url;
+            audioPlayer.play().then(() => {
+                btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                currentPlayBtn = btn;
+                trackTitleDisplay.innerText = `Сейчас играет: ${artist} — ${title}`;
+            }).catch(e => {
+                console.error("Playback error:", e);
+            });
+
+            audioPlayer.onended = () => {
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                trackTitleDisplay.innerText = 'Выберите песню';
+            };
+        }
+
+        function filterTracks() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = allTracksData.filter(t => 
+                t.title.toLowerCase().includes(query) || 
+                t.artist.toLowerCase().includes(query) ||
+                t.album.toLowerCase().includes(query)
+            );
+            renderTracks(filtered);
+        }
+
+        function setSearch(term) {
+            document.getElementById('search-input').value = term;
+            filterTracks();
+        }
+
+        // Запуск портала
+        initCatalog();
+    </script>
+       <script src="https://res.dalam.world/dwmw.js?roleplay"></script>
+
+</body>
+</html>
