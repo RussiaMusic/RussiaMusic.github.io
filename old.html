@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalina — Слушать и скачать музыку бесплатно | Новинки музыки 2026</title>
+    <meta name="description" content="Слушать музыку онлайн и скачать альбомы исполнителя Thalina бесплатно в хорошем качестве. Новинки музыки 2026, треки из альбома 'Та самая эльфийка' и многое другое.">
+    <meta name="keywords" content="скачать музыку бесплатно, слушать музыку онлайн, Thalina музыка, новинки музыки 2026, скачать треки mp3, хорошая музыка">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f1117;
+            --card-bg: #1a1d24;
+            --accent: #8b5cf6;
+            --accent-hover: #7c3aed;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #2d3748;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Platform Links Section */
+        .platforms-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 1px solid var(--border);
+        }
+
+        .platforms-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+        }
+
+        .btn-platform {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: #252833;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .btn-platform:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-platform.main-world {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: none;
+        }
+        .btn-platform.main-world:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
+
+        /* Music Catalog Section */
+        .catalog-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .album-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #252833;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .tracks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .track-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #222631;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .track-item:hover {
+            border-color: var(--accent);
+        }
+
+        .track-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .play-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: transform 0.2s, background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .play-btn:hover {
+            background: var(--accent-hover);
+            transform: scale(1.05);
+        }
+
+        .track-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .track-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-download {
+            background: #2d3748;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-download:hover {
+            background: #4a5568;
+        }
+
+        /* Persistent Audio Player Bar */
+        .player-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #14171f;
+            border-top: 1px solid var(--border);
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 -4px 25px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .player-content {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .now-playing {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 250px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            height: 35px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 20px;
+            margin-bottom: 80px; /* Space for player bar */
+        }
+
+        /* SEO Hidden description text for search engines */
+        .seo-text {
+            font-size: 0.8rem;
+            color: #4a5568;
+            margin-top: 30px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thalina</h1>
+            <p>Официальный музыкальный портал • Слушать онлайн и скачать музыку бесплатно</p>
+        </header>
+
+        <!-- Кнопки площадок и главного мира -->
+        <div class="platforms-section">
+            <div class="platforms-title">Слушайте Thalina на любимых музыкальных сервисах</div>
+            <div class="buttons-grid">
+                <a href="https://dalam.world/" target="_blank" class="btn-platform main-world">
+                    <i class="fa-solid fa-globe"></i> Мой мир
+                </a>
+                <a href="https://link.dalam.world/elf_yandex" target="_blank" class="btn-platform" style="color: #ffcc00;">
+                    <i class="fa-solid fa-music"></i> Яндекс Музыка
+                </a>
+                <a href="https://link.dalam.world/elf_spotify" target="_blank" class="btn-platform" style="color: #1ed760;">
+                    <i class="fa-brands fa-spotify"></i> Spotify
+                </a>
+                <a href="https://link.dalam.world/elf_apple" target="_blank" class="btn-platform" style="color: #fa57c1;">
+                    <i class="fa-brands fa-apple"></i> Apple Music
+                </a>
+                <a href="https://link.dalam.world/elf_vk" target="_blank" class="btn-platform" style="color: #0077ff;">
+                    <i class="fa-brands fa-vk"></i> VK Музыка
+                </a>
+            </div>
+        </div>
+
+        <!-- Каталог треков и альбомов -->
+        <div class="catalog-section">
+            <div class="section-title">
+                <i class="fa-solid fa-compact-disc" style="color: var(--accent);"></i> Альбомы и треки
+            </div>
+            
+            <div class="album-tabs" id="album-tabs">
+                <!-- Кнопки альбомов подгружаются динамически -->
+            </div>
+
+            <div class="tracks-list" id="tracks-list">
+                <p style="color: var(--text-muted); text-align: center; padding: 20px;">Загрузка треков из API...</p>
+            </div>
+        </div>
+
+        <!-- SEO Текст для поисковых систем (Яндекс / Google) -->
+        <div class="seo-text">
+            Добро пожаловать на официальный сайт исполнителя Thalina! Здесь вы можете совершенно бесплатно слушать музыку онлайн в хорошем качестве, скачивать популярные треки и альбомы в формате MP3. Новинки музыки 2026 года, лучшие композиции из альбомов «Та самая эльфийка» и «Beta Version Sound». Быстрый доступ к трекам без регистрации, удобный онлайн-плеер и прямые ссылки на Яндекс Музыку, Spotify, Apple Music и VK Музыку.
+        </div>
+
+        <footer>
+            &copy; 2026 Thalina Music. Все права защищены.
+        </footer>
+    </div>
+
+    <!-- Фиксированный аудиоплеер внизу -->
+    <div class="player-bar">
+        <div class="player-content">
+            <div class="now-playing" id="now-playing-text">Выберите трек для прослушивания</div>
+            <audio id="audio-player" controls></audio>
+        </div>
+    </div>
+
+    <script>
+        const ALBUMS_API = "https://api.dalam.world/android/music-albums.json";
+
+        async function loadMusicData() {
+            try {
+                const response = await fetch(ALBUMS_API);
+                const albums = await response.json();
+                
+                const tabsContainer = document.getElementById('album-tabs');
+                tabsContainer.innerHTML = '';
+                
+                let firstAlbum = true;
+                
+                for (const [albumName, albumUrl] of Object.entries(albums)) {
+                    const btn = document.createElement('button');
+                    btn.className = `tab-btn ${firstAlbum ? 'active' : ''}`;
+                    btn.innerText = albumName;
+                    btn.onclick = () => {
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        loadAlbumTracks(albumUrl);
+                    };
+                    tabsContainer.appendChild(btn);
+                    
+                    if (firstAlbum) {
+                        loadAlbumTracks(albumUrl);
+                        firstAlbum = false;
+                    }
+                }
+            } catch (e) {
+                console.error("Ошибка загрузки альбомов:", e);
+                document.getElementById('tracks-list').innerHTML = '<p style="color: #ef4444; text-align: center;">Не удалось загрузить данные из API.</p>';
+            }
+        }
+
+        async function loadAlbumTracks(url) {
+            const listContainer = document.getElementById('tracks-list');
+            listContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">Загрузка треков...</p>';
+            
+            try {
+                const response = await fetch(url);
+                const tracks = await response.json();
+                
+                listContainer.innerHTML = '';
+                
+                for (const [trackName, trackUrl] of Object.entries(tracks)) {
+                    const item = document.createElement('div');
+                    item.className = 'track-item';
+                    
+                    item.innerHTML = `
+                        <div class="track-info">
+                            <button class="play-btn" onclick="playTrack('${trackName}', '${trackUrl}', this)">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <span class="track-name">${trackName}</span>
+                        </div>
+                        <div class="track-actions">
+                            <a href="${trackUrl}" download="${trackName}.mp3" class="btn-download" target="_blank">
+                                <i class="fa-solid fa-download"></i> Скачать MP3
+                            </a>
+                        </div>
+                    `;
+                    listContainer.appendChild(item);
+                }
+            } catch (e) {
+                console.error("Ошибка загрузки треков:", e);
+                listContainer.innerHTML = '<p style="color: #ef4444; text-align: center;">Ошибка загрузки треков альбома.</p>';
+            }
+        }
+
+        const audioPlayer = document.getElementById('audio-player');
+        const nowPlayingText = document.getElementById('now-playing-text');
+        let currentPlayButton = null;
+
+        function playTrack(name, url, btnElement) {
+            if (currentPlayButton && currentPlayButton !== btnElement) {
+                currentPlayButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+
+            if (audioPlayer.src === url && !audioPlayer.paused) {
+                audioPlayer.pause();
+                btnElement.innerHTML = '<i class="fa-solid fa-play"></i>';
+                nowPlayingText.innerText = `Пауза: ${name}`;
+                return;
+            }
+
+            audioPlayer.src = url;
+            audioPlayer.play().then(() => {
+                btnElement.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                currentPlayButton = btnElement;
+                nowPlayingText.innerText = `Сейчас играет: ${name}`;
+            }).catch(e => {
+                console.error("Ошибка воспроизведения:", e);
+                nowPlayingText.innerText = `Ошибка воспроизведения трека`;
+            });
+
+            audioPlayer.onended = () => {
+                btnElement.innerHTML = '<i class="fa-solid fa-play"></i>';
+                nowPlayingText.innerText = 'Трек завершен';
+            };
+        }
+
+        // Инициализация при загрузке
+        loadMusicData();
+    </script>
+</body>
+</html>
